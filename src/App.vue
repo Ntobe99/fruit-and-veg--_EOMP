@@ -1,16 +1,17 @@
 <template>
   <NavBar/>
   <router-view/>
-  
+  <Footer></Footer>
 
 </template>
 
 <script>
 
 import NavBar from './components/NavBar.vue';
+import Footer from './components/FooterComp.vue'
 export default{
   name:'App',
-  components:{NavBar,}
+  components:{NavBar,Footer}
 }
 
 
@@ -24,17 +25,19 @@ export default{
   text-align: center;
   color: #2c3e50;
 }
-/* 
+
 nav {
-  padding: 30px;
+  padding: 50px;
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color:#ecebe9;
+  text-decoration: none;
+  padding-left: 20px;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
-} */
+  color: #c2dfd2;
+}
 </style>
