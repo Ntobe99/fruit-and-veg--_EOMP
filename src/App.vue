@@ -2,7 +2,6 @@
   <NavBar/>
   <router-view/>
   <Footer></Footer>
-
 </template>
 
 <script>

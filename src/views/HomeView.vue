@@ -1,8 +1,5 @@
 <template>
-  <div class="home">
-   <h1>
-    this is a home page !
-   </h1>
+  <div class="home" >
   </div>
 </template>
 
@@ -17,3 +14,5 @@ export default {
   }
 }
 </script>
+<style>
+</style>
