@@ -1,25 +1,16 @@
-
-const express = require("express");
-
-const path = require("path");
-
-const cors = require("cors");
-
-
-const db = require("./config");
-
-
-const bodyParser = require("body-parser");
-
-const port = parseInt(process.env.port) || 8080;
-
+const express = require('express');
+// route
+const route = require('./controllers/index');
+// cors
+const cors = require('cors');
+// port
+const port = parseInt(process.env.PORT) || 4000;
+// Express app
 const app = express();
-
-const route = express.Router();
-
+// Middleware
 const {errorHandling} = require('./middleware/ErrorHandling');
-
-const cookieParser = require("cookie-parser");
+//
+const cookieParser = require('cookie-parser');
 
 app.use((req, res, next)=> {
     res.header('Access-Control-Allow-Origin', 'http://localhost:8080')
@@ -40,7 +31,7 @@ route.get("^/$|/Fruit_And_Veg", (req, res) => {
   res.status(200).sendFile(path.join(__dirname,'./view/index.html'));
 })
 
-app.listen(3000,() =>{
+app.listen(4000,() =>{
     console.log('Server is running')
 });
 

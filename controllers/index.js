@@ -20,7 +20,7 @@ const bodyParser = require('body-parser');
 // Router
 const route = express.Router();
 // Models
-const {User, Product} = require('../model');
+const {User, Product} = require('../models');
 // Create a user instance
 const user = new User();
 // Product instance

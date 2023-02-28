@@ -62,8 +62,7 @@ class User {
   
     fetchUser(req, res) {
       const strQry = `
-          SELECT
-          userID,firstName,lastName ,emailAddress,gender,userRole,userProfile,cellphoneNumber,joinDate FROM Users WHERE userID = ?;
+          SELECT     userID,firstName,lastName,  gender , cellphoneNumber, emailAddress,userRole ,userProfile ,joinDate  FROM Users WHERE userID = ?;
           `;
       db.query(strQry, [req, params.id], (err, data) => {
         if (err) throw err;
