@@ -31,7 +31,7 @@ route.get("^/$|/Fruit_And_Veg", (req, res) => {
   res.status(200).sendFile(path.join(__dirname,'./view/index.html'));
 })
 
-app.listen(4000,() =>{
+app.listen(port,() =>{
     console.log('Server is running')
 });
 
