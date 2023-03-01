@@ -31,10 +31,11 @@ route.get('^/$|/Fruit_And_Veg', (req, res)=>{
 })
 // =========USER's Router========
 // Login
-route.post('/login', bodyParser.json(), (req, res)=>{
+route.post('/user', bodyParser.json(), (req, res)=>{
     user.login(req, res);
 })
 // Retrieve all users
+
 route.get('/users', (req, res)=>{
     user.fetchUsers(req, res);
 });
@@ -47,7 +48,7 @@ route.put('/user/:id',bodyParser.json(), (req, res)=>{
     user.updateUser(req, res);
 });
 // Register
-route.post('/register', bodyParser.json(), (req, res)=> {
+route.post('/user', bodyParser.json(), (req, res)=> {
     user.createUser(req, res);
 })
 // Delete

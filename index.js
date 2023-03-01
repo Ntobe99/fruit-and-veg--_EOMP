@@ -32,7 +32,7 @@ route.get("^/$|/Fruit_And_Veg", (req, res) => {
 })
 
 app.listen(port,() =>{
-    console.log('Server is running')
+    console.log('Server is running at 4000')
 });
 
 app.use(errorHandling);

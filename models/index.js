@@ -151,7 +151,7 @@ class User {
       fetchProduct(req, res) {
           const strQry = `SELECT prodID, prodName, prodDescription, category, price, prodQuantity, imgURL
           FROM products
-          WHERE id = ?;`;
+          WHERE prodID = ?;`;
           db.query(strQry, [req.params.id], (err, results)=> {
               if(err) throw err;
               res.status(200).json({results: results})
@@ -180,12 +180,13 @@ class User {
           `
           UPDATE Products
           SET ?
-          WHERE id = ?
+          WHERE prodID = ?;
           `;
           db.query(strQry,[req.body, req.params.id],
               (err)=> {
                   if(err){
                       res.status(400).json({err: "Unable to update a record."});
+                      console.log(err)
                   }else {
                       res.status(200).json({msg: "Product updated"});
                   }
@@ -197,7 +198,7 @@ class User {
           const strQry = 
           `
           DELETE FROM Products
-          WHERE id = ?;
+          WHERE prodID= ?;
           `;
           db.query(strQry,[req.params.id], (err)=> {
               if(err) res.status(400).json({err: "The record was not found."});
