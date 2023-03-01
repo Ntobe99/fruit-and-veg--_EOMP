@@ -3,34 +3,27 @@
         <footer>
 <div class="row primary">
   <div class="column about">
-
-    <img src="https://i.postimg.cc/15r4j7HK/Green-Illustrative-Avocado-Fruit-Label-removebg-preview.png" alt="Logo" width="150" height="150 " class="d-inline-block align-text-top">
-
-   <p>
+<p>
       If you have any questions you can get in touch with us.
   </p>
 
   <div class="social">
-    <a href=""><i class="fa fa-facebook"></i></a>
-    <a href=""><i class="fa fa-instagram"></i></a>
-    <a href=""><i class="fa fa-twitter"></i></a>
-    <a href=""><i class="fa fa-github"></i></a>
-    <a href=""><i class="fa fa-linkedin"></i></a>
+    <a href=""><i class="fa-brands fa-facebook"></i></a>
+    <a href=""><i class="fa-brands fa-instagram"></i></a>
+    <a href=""><i class="fa-brands fa-twitter"></i></a>
+    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+    
   </div>
 </div>
 <div class="column subscribe">
- <h3>Give us a call</h3>
+ <!-- <h3>Give us a call</h3> -->
  <i class="fa-solid fa-phone"> Call us at +27 62 357 2965</i>
  <i class="fa fa-envelope"> Email us at DailyFresh@gmail.com</i>
 </div>
 </div>
 <div class="row copyright">
-  <div class="footer-menu">
-  <router-link to="/">Home</router-link>
-  <router-link to="/about">About</router-link>
-  <router-link to="/contact">Contact</router-link>
-  </div>
-   <p>Copyright &copy; 2023 Nontobeko & Savannah</p>
+  
+   <h2>Copyright &copy; 2023 Nontobeko & Savannah</h2>
 </div>
 
 </footer>
@@ -47,15 +40,16 @@
 
 <style  scoped>
 footer {
-  background-color:#b5c99a;
-  color: #eaecf6;
+  background-color:rgb(30,100,49);
+  color: #E5E4D7;
   font-size: 16px;
-  padding-top:40px !important ;
+  width: 100%;
+
 }
 
-.row {
+/* .row {
   padding: 1em 1em;
-}
+} */
 .row.primary {
   display: grid;
   grid-template-columns: 2fr 1fr ;
@@ -65,13 +59,13 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 2em;
-  min-height: 15em;
+  /* padding: 0 2em; */
+  /* min-height: 15em; */
 }
 h3 {
   width: 100%;
   text-align: left;
-  color: #2c3e50;
+  color: #E5E4D7;
   font-size: 1.4em;
   white-space: nowrap;
 }
@@ -85,40 +79,32 @@ h3 {
 
 div.social {
   display: flex;
-  justify-content: space-around;
-  font-size: 2.4em;
+  gap: 1rem;
+  font-size: 2.6em;
   flex-direction: row;
-  margin-top: 0.5em;
+  
 }
 .social i {
-  color: #2c3e50;
+  color: #E5E4D7;
 }
 .social i:hover{
     color:#2a8ded
 }
 
+i{
+  padding-top: 5%;
+}
+
 .copyright {
-  padding: 0.3em 1em;
+  /* padding: 0.3em 1em; */
   background-color: rgba(69, 60, 60, 0);
 }
-.footer-menu{
-  float: left;
-  margin-top: 10px;
 
-  
-}
 .subscribe{
 text-align: start;
 }
 
-.footer-menu a{
-  color: #2c3e50  ;
-  padding: 6px;
- text-decoration: none;
-}
-.footer-menu a:hover{
-  color: black;
-}
+
 .copyright p {
   font-size: 0.9em;
   text-align: right;

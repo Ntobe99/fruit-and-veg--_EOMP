@@ -69,7 +69,7 @@ navbarLinks.forEach(function(navbarLink) {
 .navbar {
   transition: background-color 0.5s ease;
   position:sticky!important;
-  background-color: #aabb82 !important;
+  background-color: rgb(30,100,49) !important;
   
   
 }
@@ -80,10 +80,7 @@ navbarLinks.forEach(function(navbarLink) {
 /* Active link style */
 
 /* Hover link style */
- .navbar-nav .nav-link:hover {
-  background-color: #007bff;
-  color: #fff; 
-}
+
 .end{
   justify-content: flex-end;
   float: right !important;
