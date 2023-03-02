@@ -1,6 +1,6 @@
 <template>
-    <div class="login">
-<h1>This is a login page !</h1>
+    <div>
+
     </div>
 </template>
 
@@ -12,7 +12,5 @@
 </script>
 
 <style  scoped>
-.login{
-    padding-top:10rem;
-}
+
 </style>

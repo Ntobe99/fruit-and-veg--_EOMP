@@ -58,8 +58,9 @@ export default {
 
 .home{
   background-color: #f7f7f2;
-  height: 64vh;
+  height: 100vh;
   overflow-y: hidden;
+  padding-top:12rem;
   
 }
 .shop a{

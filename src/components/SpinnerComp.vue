@@ -1,68 +1,84 @@
 <template>
-  
-      <div id="spinner" class="spinner">
-    <div class="bounce1"></div>
-    <div class="bounce2"></div>
-    <div class="bounce3"></div>
-</div>
+  <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 </template>
-
-<script>
-// Show spinner
-document.getElementById("spinner").style.display = "block";
-
-// Fetch products
-fetch("https://fruit-and-veg.onrender.com/products")
-  .then(response => response.json())
-  .then(data => {
-    // Hide spinner
-    document.getElementById("spinner").style.display = "none";
-    // Do something with the products data
-  })
-  .catch(error => {
-    // Hide spinner
-    document.getElementById("spinner").style.display = "none";
-    // Handle error
-  });
-
-
-    export default {
-        name:'spinner'
-    }
-</script>
-
-<style  scoped>
-.spinner {
-    margin: 100px auto;
-    width: 70px;
-    text-align: center;
+<style>
+.lds-spinner {
+  color: official;
+  display: inline-block;
+  position:relative;
+  width: 90px;
+  height: 90px;
 }
-
-.spinner > div {
-    width: 18px;
-    height: 18px;
-    background-color: #333;
-    border-radius: 100%;
-    display: inline-block;
-    animation: bounce 1.4s infinite ease-in-out both;
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
 }
-
-.spinner .bounce1 {
-    animation-delay: -0.32s;
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: black;
 }
-
-.spinner .bounce2 {
-    animation-delay: -0.16s;
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
 }
-
-@keyframes bounce {
-    0%, 80%, 100% {
-        transform: scale(0);
-    }
-    40% {
-        transform: scale(1.0);
-    }
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
 }
-
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} 
 
 </style>

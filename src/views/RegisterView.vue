@@ -41,8 +41,8 @@
 <style  scoped>
      .register{
         background-color: #f7f7f2;
-        padding-top:1rem;
-        padding-bottom: 1rem;
+        padding-top:10rem;
+        padding-bottom: 2rem;
      }
     .container {
       max-width: 800px;

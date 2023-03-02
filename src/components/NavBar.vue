@@ -68,7 +68,7 @@ navbarLinks.forEach(function(navbarLink) {
 /* Navbar style */
 .navbar {
   transition: background-color 0.5s ease;
-  position:sticky!important;
+  
   background-color: rgb(30,100,49) !important;
   
   

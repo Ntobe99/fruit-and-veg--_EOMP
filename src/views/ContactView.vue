@@ -45,8 +45,9 @@
 
 <style  scoped>
 .contact{
-    height: 70vh;
+    height: 90vh;
     background-color: #f7f7f2;
+    padding-top:10rem;
 }
 .btn{
     margin-top:1rem;
@@ -56,7 +57,9 @@
     flex-direction: column;
   }
   .contact{
-    height: 100vh;
+    height: 150vh;
+    padding-bottom: 1rem;
+    padding-top: 20rem;
   }
 }
 
