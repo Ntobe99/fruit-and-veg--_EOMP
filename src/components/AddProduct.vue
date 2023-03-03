@@ -48,36 +48,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      prodName: '',
-      prodDescription: '',
-      category: 'fruits',
-      price: null
-    }
-  },
-  methods: {
-    addProduct() {
-      const product = {
-        name: this.prodName,
-        description: this.prodDescription,
-        category: this.category,
-        price: this.price
-      };
-     
-      this.prodName = '';
-      this.prodDescription = '';
-      this.category = 'fruits';
-      this.price = null;
-      $('#addProductModal').modal('hide');
-    }
-  },
-
-//   setup() {
-//     const store = useStore();
-//     store.dispatch("addProducts");
-//     const addproducts = computed(() => store.state.addproducts);
-
-// }
+  
 }
 </script>

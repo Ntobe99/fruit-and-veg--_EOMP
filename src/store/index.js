@@ -10,17 +10,19 @@ export default createStore({
     showSpinner: true,
     message: null,
     addproduct:null,
-    addUser:null
+    addUser:null,
+    editproduct:null,
 
   },
   getters: {
     getProducts: (state) => state.products,
     getProduct:(state) =>state.products,
     getUsers: (state) => state.users,
-    addproduct:(state)=>state.product,
-    deleteproduct:(state)=>state.product,
+    addproduct:(state)=>state.addproduct,
+    deleteproduct:(state)=>state.deleteproduct,
     addUser:(state)=>state.product,
-    updateUser:(state)=>state.product,
+    updateUser:(state)=>state.updateproduct,
+    editproduct:(state)=>state.editproduct,
    
   },
   mutations: {
@@ -39,9 +41,11 @@ export default createStore({
     },
     addProduct:(state,value) =>(state.value=value),
     deleteproduct:(state,value) =>(state.value=value),
-   addUser:(state,value) =>(state.value=value),
-   updateUser:(state,value) =>(state.value=value),
-   getProduct:(state,value) =>(state.value=value),
+    addUser:(state,value) =>(state.value=value),
+    updateUser:(state,value) =>(state.value=value),
+    getProduct:(state,value) =>(state.value=value),
+    editproduct:(state,editproduct)=>state.editproduct=editproduct,
+
 
 
   },
@@ -124,12 +128,21 @@ export default createStore({
         context.commit("setMessage", err);
       
     }},
-    
+    async updateProduct(context){
+      const res = await axios.put(`${FGURL}product/:id`);
+      const { result, err } = await res.data;
+      if (result) {
+        context.commit("setUpdate", result);
+      } else {
+        context.commit("setMessage ", err);
+      
+    }},
+
 
     
- 
+    },
 
-  },
+modules: {
 
-modules: {},
-});
+}
+  });

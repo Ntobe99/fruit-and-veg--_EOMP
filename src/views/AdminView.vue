@@ -55,7 +55,7 @@
       <th scope="row">{{product.prodName }}</th>
       <td>{{product.price}}</td>
       <td><img :src="product.imgURL" style="height:5rem"></td>
-      <td><button type="button" class="btn btn-primary animate__animated animate__heartBeat" style="width:5rem">Edit</button></td>
+      <td><button type="button" class="btn btn-primary animate__animated animate__heartBeat" style="width:5rem"><router-link to="/updateP">Edit</router-link></button></td>
 <td><button type="button" class="btn btn-danger animate__animated animate__heartBeat">Delete</button></td>
     </tr>
   </tbody>
