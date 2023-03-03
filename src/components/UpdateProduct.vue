@@ -1,52 +1,117 @@
 <template>
-  <div class="update-product">
-    <form v-for="product in products" :key="product.prodID">
-            <input type="text" :placeholder="product.prodName" class="form-control text-center w-75 mx-auto mb-2" v-model="payload.prodName">
-            <input type="text" :placeholder="product.prodDescription" class="form-control text-center w-75 mx-auto mb-2" v-model="payload.prodDescription">  
-            <input type="text" :placeholder="product.category" class="form-control text-center w-75 mx-auto mb-2" v-model="payload.category">
-            <input type="number" :placeholder="product.price" class="form-control text-center w-75 mx-auto mb-2" v-model="payload.price">
-            <input type="email" :placeholder="product.prodQuantity" class="form-control text-center w-75 mx-auto mb-2" v-model="payload.prodQuantity">
-               <div class="btn-group">
-                <button type="submit" class="btn btn-success" v-on:click="edit">Submit</button>
-                <button type="reset" class="btn btn-danger">Reset</button>
+  <div
+    class="modal fade"
+    id="updateProductModal"
+    tabindex="-1"
+    aria-labelledby="updateProductModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="updateProductModalLabel">
+            Update Product
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form @submit.prevent="modifyProduct">
+            <input
+              type="number"
+              placeholder="Enter product ID"
+              class="form-control text-center w-75 mx-auto mb-2"
+              v-model="updatedProduct.prodID"
+            />
+
+            <input
+              type="text"
+              placeholder="Product Name"
+              class="form-control text-center w-75 mx-auto mb-2"
+              v-model="updatedProduct.prodName"
+            />
+            <input
+              type="text"
+              placeholder="Product Description"
+              class="form-control text-center w-75 mx-auto mb-2"
+              v-model="updatedProduct.prodDescription"
+            />
+            <input
+              type="text"
+              placeholder="Category"
+              class="form-control text-center w-75 mx-auto mb-2"
+              v-model="updatedProduct.category"
+            />
+            <input
+              type="number"
+              placeholder="Price"
+              class="form-control text-center w-75 mx-auto mb-2"
+              v-model="updatedProduct.price"
+            />
+            <input
+              type="number"
+              placeholder="Product Quantity"
+              class="form-control text-center w-75 mx-auto mb-2"
+              v-model="updatedProduct.prodQuantity"
+            />
+            <div class="btn-group">
+              <button type="submit" class="btn btn-success">Submit</button>
             </div>
-        </form>
-    
+          </form>
+          <!-- <div class="update-product">
+          </div> -->
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
-  
 
 <script>
-import {useStore} from 'vuex';
-import {computed} from '@vue/runtime-core';
+import { useStore } from "vuex";
+import { computed } from "@vue/runtime-core";
 
-export default{
-    setup(){
-      let updatedProduct ={
-        prodName:'' ,
-        prodDescription:'',
-        category:'',
-        price:'',
-        prodQuantity:''
-      };           
-      const store = useStore();
-    store.dispatch("updateProducts",updatedProduct);
-    const updateproducts = computed(() => store.state.updateproducts);
-   
+export default {
+  setup() {
+    let updatedProduct = {
+      prodID: 0,
+      prodName: "",
+      prodDescription: "",
+      category: "",
+      price: "",
+      prodQuantity: "",
+      imgURL: "",
+    };
+    const store = useStore();
+    const modifyProduct = () => {
+      store.dispatch("editProduct", updatedProduct);
+    };
+    // const editproduct = computed(() => store.state.editproduct);
+
     return {
-      updateproducts,
-      updatedProduct
-     
+      updatedProduct,
+      modifyProduct,
     };
   },
 };
-        
-    
-
-
-
 </script>
 
 <style>
+.update-product {
+  padding-top: 15rem;
+}
 
 </style>

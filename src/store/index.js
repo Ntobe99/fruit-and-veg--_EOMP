@@ -91,8 +91,8 @@ export default createStore({
      
       }
     },
-    async deleteProduct(context){
-      const res = await axios.delete(`${FGURL}product/:id`);
+    async deleteProduct(context,prodID){
+      const res = await axios.delete(`${FGURL}product/${prodID}`);
       const { result, err } = await res.data;
       if (result) {
         context.commit("setProducts", result);
@@ -128,19 +128,16 @@ export default createStore({
         context.commit("setMessage", err);
       
     }},
-    async updateProduct(context){
+    async editProduct(context){
       const res = await axios.put(`${FGURL}product/:id`);
       const { result, err } = await res.data;
       if (result) {
-        context.commit("setUpdate", result);
+        context.commit("setEditProducts", result);
       } else {
         context.commit("setMessage ", err);
       
     }},
-
-
-    
-    },
+ },
 
 modules: {
 

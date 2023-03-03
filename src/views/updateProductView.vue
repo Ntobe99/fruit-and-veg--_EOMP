@@ -1,5 +1,5 @@
-<template lang="">
-    <div>
+<template>
+    <div class="update">
         <UpdateProduct/>
     </div>
 </template>

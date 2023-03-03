@@ -37,7 +37,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ product.prodName }}</h5>
           <p class="card-text">R{{ product.price }}</p>
-          <a href="#" class="btn btn-dark">See more</a>
+         <button class="bu"></button>
         </div>
       </div>
     </div>
