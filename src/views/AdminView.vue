@@ -1,14 +1,19 @@
-<template>
-  <div class="container-fluid">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col">
-          <!-- <AddProduct /> -->
-        </div>
-        <div class="col">Column</div>
-        <div class="col">Column</div>
-      </div>
+ <template>
+    <div class="container-fluid">
+
+      <div class="container text-center">
+  <div class="row">
+    <div class="col">
+     <AddProduct/>
     </div>
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+  </div>
+</div>
 
     <div class="row"><h1>Users</h1></div>
     <div class="row">
@@ -96,32 +101,32 @@
         </table>
       </div>
     </div>
-  </div>
-</template>
+    </div>
+  
+   
+ </template>
+ 
+ <script>
+import AddProduct from '@/components/AddProduct.vue';
+import {computed} from '@vue/runtime-core';
+import {useStore} from 'vuex';
 
-<script>
-// import AddProduct from "@/components/AddProduct.vue";
-// import DeleteProduct from "@/components/deleteProduct.vue";
-import UpdateProduct from "@/components/UpdateProduct.vue";
-import { computed } from "@vue/runtime-core";
-import { useStore } from "vuex";
-
-export default {
-  setup() {
-    const store = useStore();
-    store.dispatch("fetchUsers");
-    store.dispatch("fetchProducts");
-    const products = computed(() => store.state.products);
-    const users = computed(() => store.state.users);
-    // const addProduct = computed(() => store.state.addProduct);
-    return {
-      users,
-      products,
-      // addProduct,
-    };
-  },
-  components: { UpdateProduct,}
-    //  DeleteProduct },
+export default{
+    setup() {
+        const store = useStore();
+        store.dispatch("fetchUsers");
+        store.dispatch("fetchProducts");
+        const products = computed(() => store.state.products);
+        const users = computed(() => store.state.users);
+        const addProduct= computed(()=>store.state.addProduct)
+        return {
+            users,
+            products,
+            addProduct,
+            
+        };
+    },
+    components: { AddProduct }
 };
 </script>
 
@@ -134,5 +139,6 @@ export default {
     padding-top: 17rem;
     padding-bottom: 1rem;
   }
-}
-</style>
+ }
+ 
+ </style>
