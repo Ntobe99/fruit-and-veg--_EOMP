@@ -1,5 +1,5 @@
 <template>
-  <div class="home" >
+  <div class="home">
     <div class="container text-start">
   <div class="row">
     <div class="col">
@@ -85,6 +85,7 @@ export default {
     flex-direction: column;
   }
   .home{
+    padding-top: 20rem;
     height: 180vh;
   }
 }
