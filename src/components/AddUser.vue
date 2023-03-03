@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="btn btn-dark"
+    class="btn btn-dark savsButtons"
     data-bs-toggle="modal"
     data-bs-target="#exampleModal"
   >
@@ -124,4 +124,8 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style>
+    .savsButtons {
+        margin: 0 15px;
+    }
+</style>

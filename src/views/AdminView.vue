@@ -5,6 +5,7 @@
   <div class="row">
     <div class="col">
      <AddProduct/>
+     <AddUser/>
     </div>
       <div class="col">
         <form class="d-flex" role="search">
@@ -17,9 +18,7 @@
           <button class="btn btn-dark" type="submit">Search</button>
         </form>
     </div>
-    <div class="col">
-      Column
-    </div>
+    
   </div>
 </div>
 
@@ -79,6 +78,7 @@
  
  <script>
 import AddProduct from '@/components/AddProduct.vue';
+import AddUser from '@/components/AddUser.vue';
 import {computed} from '@vue/runtime-core';
 import {useStore} from 'vuex';
 
@@ -97,7 +97,7 @@ export default{
             
         };
     },
-    components: { AddProduct }
+    components: { AddProduct, AddUser}
 };
  </script>
  
@@ -110,6 +110,9 @@ export default{
     padding-top:17rem;
     padding-bottom: 1rem;
   }
+ }
+
+ button {
  }
  
  </style>
