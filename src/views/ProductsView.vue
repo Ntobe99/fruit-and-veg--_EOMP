@@ -2,7 +2,7 @@
   <div class="container-fluid products">
     <div class="row">
       <div class="col">
-      column
+      
     </div>
     <div class="col">
     <FilterProducts/>
@@ -37,7 +37,9 @@
         <div class="card-body">
           <h5 class="card-title">{{ product.prodName }}</h5>
           <p class="card-text">R{{ product.price }}</p>
-         <button class="bu"></button>
+         <button type="button" class="btn btn-dark">
+          
+          <router-link to="/singleProduct">SEE MORE</router-link></button>
         </div>
       </div>
     </div>
@@ -52,7 +54,7 @@ import { useStore } from "vuex";
 import FilterProducts from "./filterProducts.vue";
 
 export default {
-  components: { SpinnerComp, FilterProducts },
+  components: { SpinnerComp, FilterProducts, },
   setup() {
     const store = useStore();
     store.dispatch("fetchProducts");

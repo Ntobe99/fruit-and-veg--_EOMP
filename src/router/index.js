@@ -44,7 +44,11 @@ const routes = [
     name: 'updateP',
     
     component: () => import(/* webpackChunkName: "about" */ '../views/updateProductView.vue')
-  }
+  },
+  {path:'/singleProduct' ,
+   name:'singleProduct',
+   component: () => import(/* webpackChunkName: "about" */ '../views/singleProductView.vue')
+}
 ]
 
 const router = createRouter({

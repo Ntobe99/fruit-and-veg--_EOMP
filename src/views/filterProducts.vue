@@ -1,6 +1,6 @@
 <template>
     <div>
-      <input type="text" v-model="search" placeholder="Search...">
+      <!-- <input type="text" v-model="search" placeholder="Search..."> -->
       <select v-model="category">
         <option value="">All categories</option>
         <option value="fruits">Fruits</option>
@@ -20,7 +20,7 @@
       return {
         products: [],
         category: '',
-        search: ''
+        
       }
     },
     computed: {

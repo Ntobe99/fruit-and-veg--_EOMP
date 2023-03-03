@@ -4,13 +4,26 @@
       <div class="container text-center">
   <div class="row">
     <div class="col">
-     <AddProduct/>
+      <button
+                  type="button"
+                  class="btn btn-primary animate__animated animate__heartBeat"
+                  
+                >
+                Add Product
+                </button>
+
     </div>
     <div class="col">
-      Column
+      <button
+           type="button"
+                  class="btn btn-primary animate__animated animate__heartBeat"
+                  style="width: 5rem"  >
+                AddUser
+                </button>
     </div>
+
     <div class="col">
-      Column
+     
     </div>
   </div>
 </div>
@@ -73,7 +86,7 @@
           </thead>
           <tbody>
             <tr v-for="product in products" :key="product.prodID">
-              <td scope="row">{{   }}</td>
+              <td scope="row">{{ product.prodID  }}</td>
               <th scope="row">{{ product.prodName }}</th>
               <td scope="row">{{ product.price }}</td>
               <td><img :src="product.imgURL" style="height: 5rem" /></td>
@@ -92,8 +105,18 @@
 
               <td>
                 
+
+                <button
+                  type="button"
+                  class="btn btn-danger animate__animated animate__heartBeat"
+                  style="width: 5rem"
+                  data-bs-toggle="modal"
+                  data-bs-target="#updateProductModal"
+                >
+                Delete
+                </button>
                 
-                  <DeleteProduct :prod-i-d="prodID"/>
+                  
                 
               </td>
             </tr>

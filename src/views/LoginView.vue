@@ -27,6 +27,7 @@
     background-color: #f7f7f2;
         padding-top:10rem;
         padding-bottom: 2rem;
+        height: 50rem;
 }
 
 .container {
@@ -81,9 +82,7 @@
     }
 
 
-a{
 
-}
 
 
 </style>
