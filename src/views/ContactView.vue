@@ -2,7 +2,7 @@
     <div class="contact">
         <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 contacts">
       <h2>Contact Info</h2>
       <p><i class="fa-solid fa-house"></i>314 Imam Haron Rd.</p>
       <p>Cape Town ,South Africa</p>
@@ -48,7 +48,8 @@
     height: 90vh;
     background-color: #f7f7f2;
     padding-top:10rem;
-}
+    font-size: x-large;
+  }
 .btn{
     margin-top:1rem;
 }
@@ -61,6 +62,10 @@
     padding-bottom: 1rem;
     padding-top: 20rem;
   }
+}
+
+.contacts{
+  padding-top: 8%;
 }
 
 </style>

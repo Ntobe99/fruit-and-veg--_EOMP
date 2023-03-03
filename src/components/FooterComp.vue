@@ -1,8 +1,8 @@
 <template>
-   <div class="footer">
+   <div class="footer sticky-bottom">
         <footer>
-<div class="row primary">
-  <div class="column about">
+<div class="primary">
+  <div class="about">
 <p>
       If you have any questions you can get in touch with us.
   </p>
@@ -15,13 +15,13 @@
     
   </div>
 </div>
-<div class="column subscribe">
+<div class="subscribe">
  <!-- <h3>Give us a call</h3> -->
- <i class="fa-solid fa-phone"> Call us at +27 62 357 2965</i>
- <i class="fa fa-envelope"> Email us at DailyFresh@gmail.com</i>
+ <!-- <i class="fa-solid fa-phone"> Call us at +27 62 357 2965</i>
+ <i class="fa fa-envelope"> Email us at DailyFresh@gmail.com</i> -->
 </div>
 </div>
-<div class="row copyright">
+<div class="copyright">
   
    <h2>Copyright &copy; 2023 Nontobeko & Savannah</h2>
 </div>
@@ -44,6 +44,7 @@ footer {
   color: #E5E4D7;
   font-size: 16px;
   width: 100%;
+  
 
 }
 
@@ -66,7 +67,7 @@ h3 {
   width: 100%;
   text-align: left;
   color: #E5E4D7;
-  font-size: 1.4em;
+  font-size: 1.1em;
   white-space: nowrap;
 }
 /*  */

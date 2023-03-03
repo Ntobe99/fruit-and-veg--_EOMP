@@ -9,25 +9,30 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-         <RouterLink to="/"><i class="fa fa-house"></i>HOME</RouterLink>
-        </li> 
-        <li class="nav-item">
-         <router-link to="/products"><i class=" fa fa-basket-shopping"></i>OUR PRODUCTS</router-link> 
-        </li>
-        <li class="nav-item">
-            <RouterLink to="/Admin"><i class="fa fa-user-pen"></i>ADMIN</RouterLink>
-        </li>
-        <li class="nav-item">
-          <router-link to="/contact"><i class="fa-sharp fa-solid fa-phone"></i>CONTACT US</router-link>
-        </li>
-        <li class="nav-item end">
-   <RouterLink to="/register"><i class="fa fa-pen-to-square"></i>REGISTER</RouterLink>
-  </li>
-  <li class="nav-item end">
-    <RouterLink to="/login"><i class="fa-sharp fa-solid fa-user"></i>LOGIN</RouterLink>
-  </li>
+      <ul class="navbar-nav w-100 d-flex justify-content-between">
+        <div class="d-flex">
+          <li class="nav-item">
+           <RouterLink to="/"><i class="fa fa-house"></i>HOME</RouterLink>
+          </li> 
+          <li class="nav-item">
+           <router-link to="/products"><i class=" fa fa-basket-shopping"></i>OUR PRODUCTS</router-link> 
+          </li>
+          <li class="nav-item">
+              <RouterLink to="/Admin"><i class="fa fa-user-pen"></i>ADMIN</RouterLink>
+          </li>
+          <li class="nav-item">
+            <router-link to="/contact"><i class="fa-sharp fa-solid fa-phone"></i>CONTACT US</router-link>
+          </li>
+        </div>
+
+        <div class="d-flex">
+          <li class="nav-item end">
+     <RouterLink to="/register"><i class="fa fa-pen-to-square"></i>REGISTER</RouterLink>
+    </li>
+    <li class="nav-item end">
+      <RouterLink to="/login"><i class="fa-sharp fa-solid fa-user"></i>LOGIN</RouterLink>
+    </li>
+        </div>
       </ul>
 
       
@@ -84,6 +89,7 @@ navbarLinks.forEach(function(navbarLink) {
 .end{
   justify-content: flex-end;
   float: right !important;
+
 }
 
 </style>
