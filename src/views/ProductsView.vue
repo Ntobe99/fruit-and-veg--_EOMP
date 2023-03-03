@@ -19,7 +19,7 @@
         </form>
       </div>
     </div>
-    <div class="row " v-if="spinnerDisplay">
+    <div class="row justify-content-center " v-if="spinnerDisplay">
       <SpinnerComp />
     </div>
     <div class="row gap-3">

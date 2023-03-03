@@ -8,7 +8,7 @@
             <input type="text" :placeholder="user.gender" class="form-control text-center w-75 mx-auto mb-2" v-model="payload.gender">
             <input type="number" :placeholder="user.cellphoneNumber" class="form-control text-center w-75 mx-auto mb-2" v-model="payload.cellphoneNumber">
             <input type="email" :placeholder="user.emailAdd" class="form-control text-center w-75 mx-auto mb-2" v-model="payload.emailAdd">
-            <input type="text" :placeholder="user.userProfile" class="form-control text-center w-75 mx-auto mb-2" v-model="payload.userProfile">
+            <input type="url" :placeholder="user.userProfile" class="form-control text-center w-75 mx-auto mb-2" v-model="payload.userProfile">
             <input type="text" placeholder="Enter Password" class="form-control text-center w-75 mx-auto mb-2" v-model="payload.userPass">
             <div class="btn-group">
                 <button type="submit" class="btn btn-success" v-on:click="edit">Submit</button>
